@@ -21,13 +21,13 @@ can be used for that purpose.
 At a minimum, a `goal` or `phase` must be provided:
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   goals: tools.bestquality:ci-maven-plugin:0.0.20:expand-pom
 ```
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   phases: clean, install
 ```
@@ -35,7 +35,7 @@ with:
 ## Specifying CI-friendly properties
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   revision: 2.22.2
   sha1: -${{github.run_id}}
@@ -47,7 +47,7 @@ with:
 ## Running with custom files
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   settings-file: path/to/settings.xml
   toolchains-file: path/to/toolchains.xml
@@ -62,7 +62,7 @@ with:
 Multiline support:
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   system-properties: |
     property=value
@@ -73,7 +73,7 @@ with:
 or using a single line:
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   system-properties: property=value, flag
   phases: clean, install
@@ -85,7 +85,7 @@ Specifying the `maven-opts` option will cause the supplied value to override an 
 `MAVEN_OPTS` environment variable for the duration of the command execution.
 
 ```yaml
-uses: actions/ci-maven@v1
+uses: Best-Quality-Engineering/ci-maven-action@v1
 with:
   maven-opts: -Xms256m -Xmx512m
   phases: clean, install
